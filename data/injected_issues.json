@@ -1,0 +1,200 @@
+{
+  "period_start": "2024-10-01",
+  "period_end": "2025-09-30",
+  "entities": [
+    {
+      "entity_id": "PWR-01",
+      "name": "Grid Power Transmission Co.",
+      "sector": "Power",
+      "category": "bad",
+      "injected_issues": [
+        {
+          "code": "fast_close_no_notes",
+          "description": "Critical/high alerts closed in under 15 minutes with no investigation notes."
+        },
+        {
+          "code": "no_escalation",
+          "description": "Zero escalations recorded across the entire period despite critical alerts."
+        },
+        {
+          "code": "template_notes",
+          "description": "Investigation notes are near-identical templated text copy-pasted across cases."
+        },
+        {
+          "code": "telemetry_gap_asset",
+          "description": "A critical-tier asset generates almost zero alerts (monitoring/telemetry gap)."
+        },
+        {
+          "code": "audit_no_logs",
+          "description": "Alert/case activity exists with NO corresponding audit_logs entries at all."
+        }
+      ]
+    },
+    {
+      "entity_id": "PWR-02",
+      "name": "Solaris Renewable Power Ltd.",
+      "sector": "Power",
+      "category": "good",
+      "injected_issues": []
+    },
+    {
+      "entity_id": "PWR-03",
+      "name": "Continental Power Distribution",
+      "sector": "Power",
+      "category": "good",
+      "injected_issues": []
+    },
+    {
+      "entity_id": "PWR-04",
+      "name": "Highland Power Utilities",
+      "sector": "Power",
+      "category": "borderline",
+      "injected_issues": [
+        {
+          "code": "low_escalation_rate",
+          "description": "Escalation rate for critical alerts well below peer median."
+        },
+        {
+          "code": "audit_gap_window",
+          "description": "A 3-4 week window with zero audit log entries despite alert/case activity continuing."
+        },
+        {
+          "code": "volume_flatline",
+          "description": "A multi-week flatline/drop in alert volume suggesting a monitoring outage."
+        }
+      ]
+    },
+    {
+      "entity_id": "BNK-01",
+      "name": "Meridian National Bank",
+      "sector": "Banking",
+      "category": "bad",
+      "injected_issues": [
+        {
+          "code": "low_alert_volume",
+          "description": "Overall alert volume ~90% below sector peers with no plausible operational reason."
+        },
+        {
+          "code": "no_escalation",
+          "description": "Zero escalations recorded across the entire period despite critical alerts."
+        },
+        {
+          "code": "audit_gap_window",
+          "description": "A 3-4 week window with zero audit log entries despite alert/case activity continuing."
+        }
+      ]
+    },
+    {
+      "entity_id": "BNK-02",
+      "name": "Coastal Trust Bank",
+      "sector": "Banking",
+      "category": "bad",
+      "injected_issues": [
+        {
+          "code": "fast_close_no_notes",
+          "description": "Critical/high alerts closed in under 15 minutes with no investigation notes."
+        },
+        {
+          "code": "template_notes",
+          "description": "Investigation notes are near-identical templated text copy-pasted across cases."
+        },
+        {
+          "code": "audit_no_logs",
+          "description": "Alert/case activity exists with NO corresponding audit_logs entries at all."
+        }
+      ]
+    },
+    {
+      "entity_id": "BNK-03",
+      "name": "Zenith Cooperative Bank",
+      "sector": "Banking",
+      "category": "good",
+      "injected_issues": []
+    },
+    {
+      "entity_id": "BNK-04",
+      "name": "Unity Regional Bank",
+      "sector": "Banking",
+      "category": "good",
+      "injected_issues": []
+    },
+    {
+      "entity_id": "TEL-01",
+      "name": "Airwave Telecom Networks",
+      "sector": "Telecom",
+      "category": "bad",
+      "injected_issues": [
+        {
+          "code": "missing_category",
+          "description": "An alert category common across sector peers (lateral_movement) never appears."
+        },
+        {
+          "code": "no_root_cause",
+          "description": "High/critical alerts marked resolved without root_cause_identified."
+        },
+        {
+          "code": "audit_no_logs",
+          "description": "Alert/case activity exists with NO corresponding audit_logs entries at all."
+        }
+      ]
+    },
+    {
+      "entity_id": "TEL-02",
+      "name": "Nexline Communications",
+      "sector": "Telecom",
+      "category": "borderline",
+      "injected_issues": [
+        {
+          "code": "low_escalation_rate",
+          "description": "Escalation rate for critical alerts well below peer median."
+        },
+        {
+          "code": "low_conversion_rate",
+          "description": "High/critical alerts acknowledged but rarely converted into a formal case."
+        },
+        {
+          "code": "audit_privileged_not_reviewed",
+          "description": "Privileged actions (config_change/access_grant) never marked reviewed_by_supervisor."
+        }
+      ]
+    },
+    {
+      "entity_id": "TEL-03",
+      "name": "Skyline Mobile Services",
+      "sector": "Telecom",
+      "category": "borderline",
+      "injected_issues": [
+        {
+          "code": "telemetry_gap_asset",
+          "description": "A critical-tier asset generates almost zero alerts (monitoring/telemetry gap)."
+        },
+        {
+          "code": "audit_privileged_not_reviewed",
+          "description": "Privileged actions (config_change/access_grant) never marked reviewed_by_supervisor."
+        }
+      ]
+    },
+    {
+      "entity_id": "TEL-04",
+      "name": "Horizon Telecom Ltd.",
+      "sector": "Telecom",
+      "category": "good",
+      "injected_issues": []
+    }
+  ],
+  "issue_catalog": {
+    "fast_close_no_notes": "Critical/high alerts closed in under 15 minutes with no investigation notes.",
+    "no_escalation": "Zero escalations recorded across the entire period despite critical alerts.",
+    "template_notes": "Investigation notes are near-identical templated text copy-pasted across cases.",
+    "telemetry_gap_asset": "A critical-tier asset generates almost zero alerts (monitoring/telemetry gap).",
+    "low_alert_volume": "Overall alert volume ~90% below sector peers with no plausible operational reason.",
+    "low_escalation_rate": "Escalation rate for critical alerts well below peer median.",
+    "audit_no_logs": "Alert/case activity exists with NO corresponding audit_logs entries at all.",
+    "audit_gap_window": "A 3-4 week window with zero audit log entries despite alert/case activity continuing.",
+    "audit_privileged_not_reviewed": "Privileged actions (config_change/access_grant) never marked reviewed_by_supervisor.",
+    "missing_category": "An alert category common across sector peers (lateral_movement) never appears.",
+    "no_root_cause": "High/critical alerts marked resolved without root_cause_identified.",
+    "volume_flatline": "A multi-week flatline/drop in alert volume suggesting a monitoring outage.",
+    "low_conversion_rate": "High/critical alerts acknowledged but rarely converted into a formal case."
+  }
+}
