@@ -59,11 +59,10 @@ PLOTLY_LAYOUT = dict(
 
 def load_data():
     if not Path(DB_PATH).exists():
-        st.error(
-            f"No database found at `{DB_PATH}`. Generate the synthetic dataset first:\n\n"
-            f"```\npython data_generator.py\n```"
-        )
-        st.stop()
+        with st.spinner("First run: generating the synthetic demo dataset..."):
+            import data_generator
+            data_generator.build_database()
+            data_generator.write_issue_seed_sheet()
     return build_analytics(str(DB_PATH))
 
 
