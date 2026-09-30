@@ -3,4 +3,5 @@ __pycache__/
 *.pyc
 .streamlit/secrets.toml
 data/*.db
+reports/_chart_market.png
 .DS_Store
